@@ -10,6 +10,8 @@
 
 @interface NewTaskViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *taskTitle;
+
 - (IBAction)cancel:(id)sender;
 
 @end
