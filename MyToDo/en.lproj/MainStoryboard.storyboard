@@ -123,7 +123,7 @@
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="add" id="Lsf-Uy-YIL">
                             <connections>
-                                <segue destination="faZ-ZM-zsK" kind="push" id="D80-g2-ilf"/>
+                                <segue destination="Plc-C1-m2G" kind="modal" id="PWs-XX-j4k"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -135,9 +135,9 @@
         <scene sceneID="Djm-fQ-wjh">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMv-az-mBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="faZ-ZM-zsK" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="faZ-ZM-zsK" customClass="NewTaskViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="frq-7t-ZyE">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -219,11 +219,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Task" id="mpa-D6-snP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UJL-dG-aAv">
+                            <connections>
+                                <action selector="cancel:" destination="faZ-ZM-zsK" id="1Xa-ph-BHB"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="7gz-WV-dWR"/>
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="693" y="92"/>
+            <point key="canvasLocation" x="1240" y="92"/>
         </scene>
         <scene sceneID="0Nl-R7-2N1">
             <objects>
@@ -246,6 +251,23 @@
             </objects>
             <point key="canvasLocation" x="-183" y="92"/>
         </scene>
+        <scene sceneID="7D9-OW-0wv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdV-yG-Kdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="Plc-C1-m2G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Eet-f0-JAS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="faZ-ZM-zsK" kind="relationship" relationship="rootViewController" id="rt2-vg-5R2"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="714" y="92"/>
+        </scene>
     </scenes>
     <resources>
         <image name="fav2 copy.png" width="24" height="24"/>
@@ -253,11 +275,6 @@
         <image name="inbox copy.png" width="16" height="16"/>
         <image name="index_inbox.png" width="64" height="64"/>
     </resources>
-    <classes>
-        <class className="IndexTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IndexTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

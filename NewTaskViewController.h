@@ -10,4 +10,6 @@
 
 @interface NewTaskViewController : UITableViewController
 
+- (IBAction)cancel:(id)sender;
+
 @end

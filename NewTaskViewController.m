@@ -126,4 +126,8 @@
      */
 }
 
+- (IBAction)cancel:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 @end
