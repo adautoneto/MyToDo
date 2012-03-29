@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA27E5EC1523F6CB0041B9F4 /* ListTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */; };
+		AA27E5F91523FA0D0041B9F4 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27E5F81523FA0D0041B9F4 /* Repository.m */; };
 		AA9F73CD151896CB0037BCA8 /* NewTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9F73CC151896CB0037BCA8 /* NewTaskViewController.m */; };
 		AAC8A06E150ADEB400416925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A06D150ADEB400416925 /* UIKit.framework */; };
 		AAC8A070150ADEB400416925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A06F150ADEB400416925 /* Foundation.framework */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		AA27E5EA1523F6CB0041B9F4 /* ListTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTasksTableViewController.h; sourceTree = "<group>"; };
 		AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTasksTableViewController.m; sourceTree = "<group>"; };
+		AA27E5F71523FA0D0041B9F4 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		AA27E5F81523FA0D0041B9F4 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 		AA9F73CB151896CB0037BCA8 /* NewTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewTaskViewController.h; path = ../NewTaskViewController.h; sourceTree = "<group>"; };
 		AA9F73CC151896CB0037BCA8 /* NewTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewTaskViewController.m; path = ../NewTaskViewController.m; sourceTree = "<group>"; };
 		AAC8A069150ADEB400416925 /* MyToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA27E5F61523F9CB0041B9F4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AA27E5F71523FA0D0041B9F4 /* Repository.h */,
+				AA27E5F81523FA0D0041B9F4 /* Repository.m */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
 		AAC8A05E150ADEB400416925 = {
 			isa = PBXGroup;
 			children = (
@@ -93,17 +105,18 @@
 		AAC8A073150ADEB400416925 /* MyToDo */ = {
 			isa = PBXGroup;
 			children = (
-				AAC8A090150AE45E00416925 /* Images */,
+				AA27E5F61523F9CB0041B9F4 /* Domain */,
 				AAC8A07C150ADEB400416925 /* AppDelegate.h */,
 				AAC8A07D150ADEB400416925 /* AppDelegate.m */,
 				AAC8A07F150ADEB400416925 /* MainStoryboard.storyboard */,
 				AA27E5EA1523F6CB0041B9F4 /* ListTasksTableViewController.h */,
 				AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */,
-				AAC8A074150ADEB400416925 /* Supporting Files */,
 				AAC8A08D150AE35B00416925 /* IndexTableViewController.h */,
 				AAC8A08E150AE35B00416925 /* IndexTableViewController.m */,
 				AA9F73CB151896CB0037BCA8 /* NewTaskViewController.h */,
 				AA9F73CC151896CB0037BCA8 /* NewTaskViewController.m */,
+				AAC8A090150AE45E00416925 /* Images */,
+				AAC8A074150ADEB400416925 /* Supporting Files */,
 			);
 			path = MyToDo;
 			sourceTree = "<group>";
@@ -203,6 +216,7 @@
 				AAC8A08F150AE35B00416925 /* IndexTableViewController.m in Sources */,
 				AA9F73CD151896CB0037BCA8 /* NewTaskViewController.m in Sources */,
 				AA27E5EC1523F6CB0041B9F4 /* ListTasksTableViewController.m in Sources */,
+				AA27E5F91523FA0D0041B9F4 /* Repository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
