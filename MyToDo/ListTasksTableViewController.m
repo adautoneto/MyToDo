@@ -1,16 +1,15 @@
 //
-//  NewTaskViewController.m
+//  ListTasksTableViewController.m
 //  MyToDo
 //
-//  Created by Adauto Francisco Leite Neto on 3/20/12.
+//  Created by Adauto Francisco Leite Neto on 3/28/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "NewTaskViewController.h"
+#import "ListTasksTableViewController.h"
 
 
-@implementation NewTaskViewController
-@synthesize taskTitle;
+@implementation ListTasksTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,7 +43,6 @@
 
 - (void)viewDidUnload
 {
-    [self setTaskTitle:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -58,7 +56,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [taskTitle becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -75,6 +72,36 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
+    
+    return cell;
 }
 
 /*
@@ -127,10 +154,6 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-}
-
-- (IBAction)cancel:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
