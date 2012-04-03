@@ -8,10 +8,6 @@
 
 #import "Repository.h"
 
-@interface Repository()
-@property (readonly) NSUserDefaults *defaults;
-@end
-
 @implementation Repository
 
 - (NSUserDefaults *)defaults
@@ -29,9 +25,13 @@
 - (void)save:(id)item
 {
     NSMutableArray *data = [[self getAll] mutableCopy];
+    NSLog(@"Task data: %@", item);
+    if (!data) data = [[NSMutableArray alloc] init];
     [data addObject:item];
     [self.defaults setObject:data forKey:TASKS_KEY];
     [self.defaults synchronize];
+    NSLog(@"Data count: %i", data.count);
+    NSLog(@"Task count: %i", [[self getAll] count]);
 }
 
 @end

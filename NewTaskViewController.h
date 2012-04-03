@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Repository.h"
 
-@interface NewTaskViewController : UITableViewController
+@interface NewTaskViewController : UITableViewController {
+    Repository *repository;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *taskTitle;
 
 - (IBAction)cancel:(id)sender;
+- (IBAction)save:(id)sender;
 
 @end

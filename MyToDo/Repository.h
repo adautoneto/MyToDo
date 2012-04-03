@@ -11,5 +11,6 @@
 @interface Repository : NSObject
 
 - (id)getAll;
+- (void)save:(id)item;
 
 @end

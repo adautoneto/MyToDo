@@ -8,9 +8,19 @@
 
 #import "NewTaskViewController.h"
 
+@interface NewTaskViewController()
+@property (readonly) Repository *repository;
+@end
 
 @implementation NewTaskViewController
 @synthesize taskTitle;
+
+- (Repository *)repository
+{
+    if (!repository)
+        repository = [[Repository alloc] init];
+    return repository;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -131,6 +141,12 @@
 
 - (IBAction)cancel:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)save:(id)sender {
+    NSLog(@"Task Title: %@", taskTitle.text);
+    [self.repository save: taskTitle.text];
+    [self cancel:sender];
 }
 
 @end

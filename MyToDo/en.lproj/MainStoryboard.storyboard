@@ -38,6 +38,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="vlA-0w-c1c" kind="push" id="qRj-HD-ZUC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -224,7 +227,11 @@
                                 <action selector="cancel:" destination="faZ-ZM-zsK" id="1Xa-ph-BHB"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7gz-WV-dWR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7gz-WV-dWR">
+                            <connections>
+                                <action selector="save:" destination="faZ-ZM-zsK" id="nFR-aX-C0E"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="taskTitle" destination="eob-uQ-cjv" id="ezr-KW-aY4"/>
@@ -276,11 +283,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQE-VQ-U74" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vlA-0w-c1c" customClass="ListTasksTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bCC-5m-aby">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Vfv-f2-XPj" style="IBUITableViewCellStyleDefault" id="3Jd-dt-wcs">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" textLabel="Vfv-f2-XPj" style="IBUITableViewCellStyleDefault" id="3Jd-dt-wcs">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -304,6 +311,7 @@
                             <outlet property="delegate" destination="vlA-0w-c1c" id="Ari-fw-zBi"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="AGu-eX-LgC"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="714" y="728"/>
