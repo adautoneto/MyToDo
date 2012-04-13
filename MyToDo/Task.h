@@ -1,5 +1,5 @@
 //
-//  Repository.h
+//  Task.h
 //  MyToDo
 //
 //  Created by Adauto Francisco Leite Neto on 4/12/12.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol Repository <NSObject>
+@interface Task : NSObject
 
-- (id)getAll;
-- (void)save:(id)item;
+@property (strong) NSString *title;
+@property bool done;
 
 @end

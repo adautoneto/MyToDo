@@ -10,16 +10,16 @@
 
 @interface ListTasksTableViewController()
 
-@property (readonly) Repository *repository;
+@property (readonly) UserDefaultsRepository *repository;
 
 @end
     
 @implementation ListTasksTableViewController
 
-- (Repository *)repository
+- (UserDefaultsRepository *)repository
 {
     if (!repository)
-        repository = [[Repository alloc] init];
+        repository = [[UserDefaultsRepository alloc] init];
     return repository;
 }
 

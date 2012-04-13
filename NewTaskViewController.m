@@ -9,16 +9,16 @@
 #import "NewTaskViewController.h"
 
 @interface NewTaskViewController()
-@property (readonly) Repository *repository;
+@property (readonly) id <Repository> repository;
 @end
 
 @implementation NewTaskViewController
 @synthesize taskTitle;
 
-- (Repository *)repository
+- (id <Repository>)repository
 {
     if (!repository)
-        repository = [[Repository alloc] init];
+        repository = [[UserDefaultsRepository alloc] init];
     return repository;
 }
 

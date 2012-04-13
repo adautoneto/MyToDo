@@ -1,16 +1,16 @@
 //
-//  Repository.h
+//  Task.m
 //  MyToDo
 //
 //  Created by Adauto Francisco Leite Neto on 4/12/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Task.h"
 
-@protocol Repository <NSObject>
+@implementation Task
 
-- (id)getAll;
-- (void)save:(id)item;
+@synthesize title = _title;
+@synthesize done = _done;
 
 @end

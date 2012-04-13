@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Repository.h"
+#import "UserDefaultsRepository.h"
+#import "Task.h"
 
 @interface ListTasksTableViewController : UITableViewController {
-    Repository *repository;
+    UserDefaultsRepository *repository;
     NSArray *tasks;
 }
 
