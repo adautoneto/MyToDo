@@ -145,6 +145,8 @@
 
 - (IBAction)save:(id)sender {
     NSLog(@"Task Title: %@", taskTitle.text);
+//    Task *newTask = [[Task alloc] init];
+//    newTask.title = taskTitle.text;
     [self.repository save: taskTitle.text];
     [self cancel:sender];
 }

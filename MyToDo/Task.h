@@ -10,7 +10,7 @@
 
 @interface Task : NSObject
 
-@property (strong) NSString *title;
+@property (nonatomic, strong) NSString *title;
 @property bool done;
 
 @end

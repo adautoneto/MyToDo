@@ -11,7 +11,7 @@
 
 @interface UserDefaultsRepository : NSObject < Repository >
 
-- (id)getAll;
+- (NSMutableArray *)getAll;
 - (void)save:(id)item;
 
 @end

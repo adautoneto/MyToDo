@@ -10,14 +10,14 @@
 
 @implementation UserDefaultsRepository
 
+#define TASKS_KEY @"MyToDo.Tasks"
+
 - (NSUserDefaults *)defaults
 {
     return [NSUserDefaults standardUserDefaults];
 }
 
-#define TASKS_KEY @"MyToDo.Tasks"
-
-- (id)getAll
+- (NSMutableArray *)getAll
 {
     return [self.defaults objectForKey:TASKS_KEY];
 }
@@ -25,8 +25,7 @@
 - (void)save:(id)item
 {
     NSMutableArray *data = [[self getAll] mutableCopy];
-    NSLog(@"Task data: %@", item);
-    if (!data) data = [[NSMutableArray alloc] init];
+    if (!data) data = [NSMutableArray array];
     [data addObject:item];
     [self.defaults setObject:data forKey:TASKS_KEY];
     [self.defaults synchronize];
