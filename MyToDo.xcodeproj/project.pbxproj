@@ -15,7 +15,7 @@
 		AAA42E9D153A0A9A00B47BCB /* next_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42E9C153A0A9A00B47BCB /* next_24x24.png */; };
 		AAA42EA4153A240600B47BCB /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42EA2153A240600B47BCB /* checkbox_checked.png */; };
 		AAA42EA5153A240600B47BCB /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42EA3153A240600B47BCB /* checkbox.png */; };
-		AAA42EA9153A24F800B47BCB /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA42EA8153A24F800B47BCB /* TaskCell.m */; };
+		AAA42EA9153A24F800B47BCB /* TaskViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA42EA8153A24F800B47BCB /* TaskViewCell.m */; };
 		AAC8A06E150ADEB400416925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A06D150ADEB400416925 /* UIKit.framework */; };
 		AAC8A070150ADEB400416925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A06F150ADEB400416925 /* Foundation.framework */; };
 		AAC8A072150ADEB400416925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A071150ADEB400416925 /* CoreGraphics.framework */; };
@@ -42,8 +42,8 @@
 		AAA42E9C153A0A9A00B47BCB /* next_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next_24x24.png; path = ../../images/next_24x24.png; sourceTree = "<group>"; };
 		AAA42EA2153A240600B47BCB /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_checked.png; path = ../../images/checkbox_checked.png; sourceTree = "<group>"; };
 		AAA42EA3153A240600B47BCB /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox.png; path = ../../images/checkbox.png; sourceTree = "<group>"; };
-		AAA42EA7153A24F800B47BCB /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
-		AAA42EA8153A24F800B47BCB /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
+		AAA42EA7153A24F800B47BCB /* TaskViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TaskViewCell.h; sourceTree = "<group>"; };
+		AAA42EA8153A24F800B47BCB /* TaskViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewCell.m; sourceTree = "<group>"; };
 		AAC8A069150ADEB400416925 /* MyToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC8A06D150ADEB400416925 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAC8A06F150ADEB400416925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,8 +122,6 @@
 				AAC8A07C150ADEB400416925 /* AppDelegate.h */,
 				AAC8A07D150ADEB400416925 /* AppDelegate.m */,
 				AAC8A07F150ADEB400416925 /* MainStoryboard.storyboard */,
-				AAA42EA7153A24F800B47BCB /* TaskCell.h */,
-				AAA42EA8153A24F800B47BCB /* TaskCell.m */,
 				AAD0BCCF1537AA04009F9232 /* Controllers */,
 				AAD0BCCE1537A9E7009F9232 /* Model */,
 				AA27E5F61523F9CB0041B9F4 /* Repository */,
@@ -171,6 +169,8 @@
 		AAD0BCCF1537AA04009F9232 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAA42EA7153A24F800B47BCB /* TaskViewCell.h */,
+				AAA42EA8153A24F800B47BCB /* TaskViewCell.m */,
 				AA27E5EA1523F6CB0041B9F4 /* ListTasksTableViewController.h */,
 				AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */,
 				AAC8A08D150AE35B00416925 /* IndexTableViewController.h */,
@@ -258,7 +258,7 @@
 				AA27E5EC1523F6CB0041B9F4 /* ListTasksTableViewController.m in Sources */,
 				AA27E5F91523FA0D0041B9F4 /* UserDefaultsRepository.m in Sources */,
 				AAD0BCD21537AA5A009F9232 /* Task.m in Sources */,
-				AAA42EA9153A24F800B47BCB /* TaskCell.m in Sources */,
+				AAA42EA9153A24F800B47BCB /* TaskViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

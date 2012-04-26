@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UserDefaultsRepository.h"
-#import "TaskCell.h"
+#import "TaskViewCell.h"
 #import "Task.h"
 
 @interface ListTasksTableViewController : UITableViewController {
