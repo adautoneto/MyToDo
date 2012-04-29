@@ -282,35 +282,32 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQE-VQ-U74" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vlA-0w-c1c" customClass="ListTasksTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bCC-5m-aby">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="bCC-5m-aby">
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="3Jd-dt-wcs" customClass="TaskViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" textLabel="4TC-Uk-0SJ" imageView="mMN-2v-Caw" style="IBUITableViewCellStyleDefault" id="3Jd-dt-wcs" customClass="TaskViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" minimumFontSize="10" id="izj-FZ-jsu">
-                                            <rect key="frame" x="63" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4TC-Uk-0SJ">
+                                            <rect key="frame" x="36" y="0.0" width="274" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="checkbox.png" highlightedImage="checkbox_checked.png" id="Fgy-XD-PLz">
-                                            <rect key="frame" x="14" y="4" width="35" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="checkbox.png" highlightedImage="checkbox_checked.png" id="mMN-2v-Caw">
+                                            <rect key="frame" x="10" y="14" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <outlet property="taskTitle" destination="izj-FZ-jsu" id="9Jy-bs-ICC"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -350,7 +347,7 @@
         <class className="TaskViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskViewCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="taskTitle" candidateClass="UILabel"/>
+                <relationship kind="action" name="setAsDone"/>
             </relationships>
         </class>
     </classes>

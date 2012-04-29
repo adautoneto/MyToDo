@@ -107,9 +107,9 @@
 {
     static NSString *CellIdentifier = @"taskCell";
     
-    TaskViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.taskTitle.text = [self.tasks objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.tasks objectAtIndex:indexPath.row];
     
     return cell;
 }

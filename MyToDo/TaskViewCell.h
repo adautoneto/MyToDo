@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Task.h"
 
 @interface TaskViewCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *taskTitle;
+- (IBAction)setAsDone;
 
 @end

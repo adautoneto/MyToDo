@@ -10,8 +10,6 @@
 
 @implementation TaskViewCell
 
-@synthesize taskTitle;
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -24,8 +22,24 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
+}
+
+- (IBAction)setAsDone
+{
+    self.imageView.highlighted = !self.imageView.highlighted;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [touches anyObject];
+    
+    if ([touch view] == self.imageView)
+    {
+        [self setAsDone];
+    }
+    
 }
 
 @end
