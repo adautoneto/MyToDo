@@ -7,26 +7,20 @@
 //
 
 #import "ListTasksTableViewController.h"
-
-@interface ListTasksTableViewController()
-
-@property (readonly) UserDefaultsRepository *repository;
-
-@end
     
 @implementation ListTasksTableViewController
 
-- (UserDefaultsRepository *)repository
-{
-    if (!repository)
-        repository = [[UserDefaultsRepository alloc] init];
-    return repository;
-}
+@synthesize fetchedResultsController = _fetchedResultsController;
 
-- (NSArray *)tasks
-{
-    NSLog(@"getAll count: %i", [[self.repository getAll] count]);
-    return [self.repository getAll];
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (!_fetchedResultsController) {
+        NSArray *descSort = [NSArray arrayWithObject:@"creationDate"];
+        
+        _fetchedResultsController = [Task getFetchedResultsController:nil ascSort:nil descSort:descSort batchSize:20];
+		
+		[_fetchedResultsController setDelegate:self];
+    }
+    return _fetchedResultsController;
 }
     
 - (id)initWithStyle:(UITableViewStyle)style
@@ -93,23 +87,14 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.tasks.count;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"taskCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.textLabel.text = [self.tasks objectAtIndex:indexPath.row];
+    Task *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = task.title;
     
     return cell;
 }

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA276FE415508D7800F92BCE /* RepositoryBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AA276FE315508D7800F92BCE /* RepositoryBase.m */; };
 		AA27E5EC1523F6CB0041B9F4 /* ListTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */; };
 		AA27E5F91523FA0D0041B9F4 /* UserDefaultsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27E5F81523FA0D0041B9F4 /* UserDefaultsRepository.m */; };
+		AA42A59A154E0C540027B398 /* TaskRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AA42A599154E0C540027B398 /* TaskRepository.m */; };
+		AA42A5A1154E1BCC0027B398 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA42A5A0154E1BCC0027B398 /* CoreData.framework */; };
+		AA42A5A4154E1CDD0027B398 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AA42A5A3154E1CDD0027B398 /* Task.m */; };
+		AA42A5A7154E227B0027B398 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA42A5A6154E227B0027B398 /* CoreDataTableViewController.m */; };
 		AA9F73CD151896CB0037BCA8 /* NewTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9F73CC151896CB0037BCA8 /* NewTaskViewController.m */; };
 		AAA42E99153A091D00B47BCB /* inbox_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42E98153A091D00B47BCB /* inbox_24x24.png */; };
 		AAA42E9B153A09C900B47BCB /* calendar_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42E9A153A09C900B47BCB /* calendar_24x24.png */; };
@@ -16,6 +21,9 @@
 		AAA42EA4153A240600B47BCB /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42EA2153A240600B47BCB /* checkbox_checked.png */; };
 		AAA42EA5153A240600B47BCB /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42EA3153A240600B47BCB /* checkbox.png */; };
 		AAA42EA9153A24F800B47BCB /* TaskViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA42EA8153A24F800B47BCB /* TaskViewCell.m */; };
+		AAC60A78154DBED8001A7016 /* project_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC60A77154DBED8001A7016 /* project_24x24.png */; };
+		AAC60A83154DD105001A7016 /* TasksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC60A81154DD105001A7016 /* TasksModel.xcdatamodeld */; };
+		AAC60AA2154DE571001A7016 /* Task+AddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC60AA1154DE571001A7016 /* Task+AddOn.m */; };
 		AAC8A06E150ADEB400416925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A06D150ADEB400416925 /* UIKit.framework */; };
 		AAC8A070150ADEB400416925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A06F150ADEB400416925 /* Foundation.framework */; };
 		AAC8A072150ADEB400416925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8A071150ADEB400416925 /* CoreGraphics.framework */; };
@@ -24,17 +32,24 @@
 		AAC8A07E150ADEB400416925 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8A07D150ADEB400416925 /* AppDelegate.m */; };
 		AAC8A081150ADEB400416925 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A07F150ADEB400416925 /* MainStoryboard.storyboard */; };
 		AAC8A08F150AE35B00416925 /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8A08E150AE35B00416925 /* IndexTableViewController.m */; };
-		AAC8A098150AE78600416925 /* projects_folder-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A097150AE78600416925 /* projects_folder-1.png */; };
 		AAC8A09C150AE89800416925 /* fav2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A09B150AE89800416925 /* fav2 copy.png */; };
 		AAC8A09E150AE8EE00416925 /* fusion_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A09D150AE8EE00416925 /* fusion_icon.png */; };
-		AAD0BCD21537AA5A009F9232 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD0BCD11537AA5A009F9232 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA276FE215508D7800F92BCE /* RepositoryBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryBase.h; sourceTree = "<group>"; };
+		AA276FE315508D7800F92BCE /* RepositoryBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryBase.m; sourceTree = "<group>"; };
 		AA27E5EA1523F6CB0041B9F4 /* ListTasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTasksTableViewController.h; sourceTree = "<group>"; };
 		AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTasksTableViewController.m; sourceTree = "<group>"; };
 		AA27E5F71523FA0D0041B9F4 /* UserDefaultsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsRepository.h; sourceTree = "<group>"; };
 		AA27E5F81523FA0D0041B9F4 /* UserDefaultsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsRepository.m; sourceTree = "<group>"; };
+		AA42A598154E0C540027B398 /* TaskRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskRepository.h; sourceTree = "<group>"; };
+		AA42A599154E0C540027B398 /* TaskRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskRepository.m; sourceTree = "<group>"; };
+		AA42A5A0154E1BCC0027B398 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA42A5A2154E1CDD0027B398 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		AA42A5A3154E1CDD0027B398 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		AA42A5A5154E227B0027B398 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		AA42A5A6154E227B0027B398 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		AA9F73CB151896CB0037BCA8 /* NewTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewTaskViewController.h; path = ../NewTaskViewController.h; sourceTree = "<group>"; };
 		AA9F73CC151896CB0037BCA8 /* NewTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewTaskViewController.m; path = ../NewTaskViewController.m; sourceTree = "<group>"; };
 		AAA42E98153A091D00B47BCB /* inbox_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inbox_24x24.png; path = ../../images/inbox_24x24.png; sourceTree = "<group>"; };
@@ -42,8 +57,12 @@
 		AAA42E9C153A0A9A00B47BCB /* next_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next_24x24.png; path = ../../images/next_24x24.png; sourceTree = "<group>"; };
 		AAA42EA2153A240600B47BCB /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_checked.png; path = ../../images/checkbox_checked.png; sourceTree = "<group>"; };
 		AAA42EA3153A240600B47BCB /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox.png; path = ../../images/checkbox.png; sourceTree = "<group>"; };
-		AAA42EA7153A24F800B47BCB /* TaskViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TaskViewCell.h; sourceTree = "<group>"; };
+		AAA42EA7153A24F800B47BCB /* TaskViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewCell.h; sourceTree = "<group>"; };
 		AAA42EA8153A24F800B47BCB /* TaskViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewCell.m; sourceTree = "<group>"; };
+		AAC60A77154DBED8001A7016 /* project_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = project_24x24.png; path = ../../images/project_24x24.png; sourceTree = "<group>"; };
+		AAC60A82154DD105001A7016 /* TasksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksModel.xcdatamodel; sourceTree = "<group>"; };
+		AAC60AA0154DE571001A7016 /* Task+AddOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+AddOn.h"; sourceTree = "<group>"; };
+		AAC60AA1154DE571001A7016 /* Task+AddOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+AddOn.m"; sourceTree = "<group>"; };
 		AAC8A069150ADEB400416925 /* MyToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC8A06D150ADEB400416925 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAC8A06F150ADEB400416925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,11 +76,8 @@
 		AAC8A080150ADEB400416925 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AAC8A08D150AE35B00416925 /* IndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexTableViewController.h; sourceTree = "<group>"; };
 		AAC8A08E150AE35B00416925 /* IndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewController.m; sourceTree = "<group>"; };
-		AAC8A097150AE78600416925 /* projects_folder-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "projects_folder-1.png"; path = "../../images/projects_folder-1.png"; sourceTree = "<group>"; };
 		AAC8A09B150AE89800416925 /* fav2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fav2 copy.png"; path = "../../images/fav2 copy.png"; sourceTree = "<group>"; };
 		AAC8A09D150AE8EE00416925 /* fusion_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fusion_icon.png; path = ../../images/fusion_icon.png; sourceTree = "<group>"; };
-		AAD0BCD01537AA5A009F9232 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		AAD0BCD11537AA5A009F9232 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		AAD0BCD31537AADF009F9232 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA42A5A1154E1BCC0027B398 /* CoreData.framework in Frameworks */,
 				AAC8A06E150ADEB400416925 /* UIKit.framework in Frameworks */,
 				AAC8A070150ADEB400416925 /* Foundation.framework in Frameworks */,
 				AAC8A072150ADEB400416925 /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +99,10 @@
 		AA27E5F61523F9CB0041B9F4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				AA42A598154E0C540027B398 /* TaskRepository.h */,
+				AA42A599154E0C540027B398 /* TaskRepository.m */,
+				AA276FE215508D7800F92BCE /* RepositoryBase.h */,
+				AA276FE315508D7800F92BCE /* RepositoryBase.m */,
 				AA27E5F71523FA0D0041B9F4 /* UserDefaultsRepository.h */,
 				AA27E5F81523FA0D0041B9F4 /* UserDefaultsRepository.m */,
 				AAD0BCD31537AADF009F9232 /* Repository.h */,
@@ -109,6 +130,7 @@
 		AAC8A06C150ADEB400416925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA42A5A0154E1BCC0027B398 /* CoreData.framework */,
 				AAC8A06D150ADEB400416925 /* UIKit.framework */,
 				AAC8A06F150ADEB400416925 /* Foundation.framework */,
 				AAC8A071150ADEB400416925 /* CoreGraphics.framework */,
@@ -145,6 +167,7 @@
 		AAC8A090150AE45E00416925 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AAC60A77154DBED8001A7016 /* project_24x24.png */,
 				AAA42EA2153A240600B47BCB /* checkbox_checked.png */,
 				AAA42EA3153A240600B47BCB /* checkbox.png */,
 				AAA42E9C153A0A9A00B47BCB /* next_24x24.png */,
@@ -152,7 +175,6 @@
 				AAA42E98153A091D00B47BCB /* inbox_24x24.png */,
 				AAC8A09D150AE8EE00416925 /* fusion_icon.png */,
 				AAC8A09B150AE89800416925 /* fav2 copy.png */,
-				AAC8A097150AE78600416925 /* projects_folder-1.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -160,8 +182,11 @@
 		AAD0BCCE1537A9E7009F9232 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AAD0BCD01537AA5A009F9232 /* Task.h */,
-				AAD0BCD11537AA5A009F9232 /* Task.m */,
+				AAC60AA0154DE571001A7016 /* Task+AddOn.h */,
+				AAC60AA1154DE571001A7016 /* Task+AddOn.m */,
+				AAC60A81154DD105001A7016 /* TasksModel.xcdatamodeld */,
+				AA42A5A2154E1CDD0027B398 /* Task.h */,
+				AA42A5A3154E1CDD0027B398 /* Task.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,6 +202,8 @@
 				AAC8A08E150AE35B00416925 /* IndexTableViewController.m */,
 				AA9F73CB151896CB0037BCA8 /* NewTaskViewController.h */,
 				AA9F73CC151896CB0037BCA8 /* NewTaskViewController.m */,
+				AA42A5A5154E227B0027B398 /* CoreDataTableViewController.h */,
+				AA42A5A6154E227B0027B398 /* CoreDataTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -233,7 +260,6 @@
 			files = (
 				AAC8A078150ADEB400416925 /* InfoPlist.strings in Resources */,
 				AAC8A081150ADEB400416925 /* MainStoryboard.storyboard in Resources */,
-				AAC8A098150AE78600416925 /* projects_folder-1.png in Resources */,
 				AAC8A09C150AE89800416925 /* fav2 copy.png in Resources */,
 				AAC8A09E150AE8EE00416925 /* fusion_icon.png in Resources */,
 				AAA42E99153A091D00B47BCB /* inbox_24x24.png in Resources */,
@@ -241,6 +267,7 @@
 				AAA42E9D153A0A9A00B47BCB /* next_24x24.png in Resources */,
 				AAA42EA4153A240600B47BCB /* checkbox_checked.png in Resources */,
 				AAA42EA5153A240600B47BCB /* checkbox.png in Resources */,
+				AAC60A78154DBED8001A7016 /* project_24x24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +284,13 @@
 				AA9F73CD151896CB0037BCA8 /* NewTaskViewController.m in Sources */,
 				AA27E5EC1523F6CB0041B9F4 /* ListTasksTableViewController.m in Sources */,
 				AA27E5F91523FA0D0041B9F4 /* UserDefaultsRepository.m in Sources */,
-				AAD0BCD21537AA5A009F9232 /* Task.m in Sources */,
 				AAA42EA9153A24F800B47BCB /* TaskViewCell.m in Sources */,
+				AAC60A83154DD105001A7016 /* TasksModel.xcdatamodeld in Sources */,
+				AAC60AA2154DE571001A7016 /* Task+AddOn.m in Sources */,
+				AA42A59A154E0C540027B398 /* TaskRepository.m in Sources */,
+				AA42A5A4154E1CDD0027B398 /* Task.m in Sources */,
+				AA42A5A7154E227B0027B398 /* CoreDataTableViewController.m in Sources */,
+				AA276FE415508D7800F92BCE /* RepositoryBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +405,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AAC60A81154DD105001A7016 /* TasksModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AAC60A82154DD105001A7016 /* TasksModel.xcdatamodel */,
+			);
+			currentVersion = AAC60A82154DD105001A7016 /* TasksModel.xcdatamodel */;
+			path = TasksModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AAC8A060150ADEB400416925 /* Project object */;
 }

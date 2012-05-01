@@ -8,18 +8,19 @@
 
 #import "NewTaskViewController.h"
 
-@interface NewTaskViewController()
-@property (readonly) id <Repository> repository;
-@end
-
 @implementation NewTaskViewController
 @synthesize taskTitle;
 
-- (id <Repository>)repository
-{
-    if (!repository)
-        repository = [[UserDefaultsRepository alloc] init];
-    return repository;
+- (IBAction)cancel:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)save:(id)sender {
+    NSLog(@"Task Title: %@", taskTitle.text);
+
+    [Task addTask:taskTitle.text];
+    
+    [self cancel:sender];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -137,18 +138,6 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-}
-
-- (IBAction)cancel:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
-}
-
-- (IBAction)save:(id)sender {
-    NSLog(@"Task Title: %@", taskTitle.text);
-//    Task *newTask = [[Task alloc] init];
-//    newTask.title = taskTitle.text;
-    [self.repository save: taskTitle.text];
-    [self cancel:sender];
 }
 
 @end

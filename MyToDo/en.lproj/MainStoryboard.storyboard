@@ -39,7 +39,7 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="vlA-0w-c1c" kind="push" id="qRj-HD-ZUC"/>
+                                            <segue destination="vlA-0w-c1c" kind="push" id="mEe-Ya-NaS"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -117,6 +117,33 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="X01-Dg-lpR">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JEM-Up-VRA" imageView="DWL-co-jEa" style="IBUITableViewCellStyleDefault" id="fhR-Rj-LDP">
+                                        <rect key="frame" x="0.0" y="230" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JEM-Up-VRA">
+                                                    <rect key="frame" x="43" y="0.0" width="227" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="project_24x24.png" id="DWL-co-jEa">
+                                                    <rect key="frame" x="9" y="9" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="CS1-hg-GTz" id="thn-in-quG"/>
@@ -133,7 +160,7 @@
                     <navigationItem key="navigationItem" title="Lists" id="Kvt-uh-Oex"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="256" y="92"/>
+            <point key="canvasLocation" x="-204" y="248"/>
         </scene>
         <scene sceneID="Djm-fQ-wjh">
             <objects>
@@ -238,7 +265,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1240" y="92"/>
+            <point key="canvasLocation" x="680" y="28"/>
         </scene>
         <scene sceneID="0Nl-R7-2N1">
             <objects>
@@ -259,7 +286,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-183" y="92"/>
+            <point key="canvasLocation" x="-819" y="248"/>
         </scene>
         <scene sceneID="7D9-OW-0wv">
             <objects>
@@ -276,7 +303,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="714" y="92"/>
+            <point key="canvasLocation" x="158" y="-260"/>
         </scene>
         <scene sceneID="wHp-Df-GTm">
             <objects>
@@ -287,7 +314,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" textLabel="4TC-Uk-0SJ" imageView="mMN-2v-Caw" style="IBUITableViewCellStyleDefault" id="3Jd-dt-wcs" customClass="TaskViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" textLabel="4TC-Uk-0SJ" imageView="mMN-2v-Caw" style="IBUITableViewCellStyleDefault" id="3Jd-dt-wcs" customClass="TaskViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -318,7 +345,7 @@
                     <navigationItem key="navigationItem" id="AGu-eX-LgC"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="714" y="728"/>
+            <point key="canvasLocation" x="298" y="728"/>
         </scene>
     </scenes>
     <resources>
@@ -328,29 +355,8 @@
         <image name="fav2 copy.png" width="24" height="24"/>
         <image name="inbox_24x24.png" width="24" height="24"/>
         <image name="next_24x24.png" width="24" height="24"/>
+        <image name="project_24x24.png" width="24" height="24"/>
     </resources>
-    <classes>
-        <class className="IndexTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IndexTableViewController.h"/>
-        </class>
-        <class className="ListTasksTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListTasksTableViewController.h"/>
-        </class>
-        <class className="NewTaskViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewTaskViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="taskTitle" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="TaskViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="setAsDone"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

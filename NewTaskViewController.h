@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserDefaultsRepository.h"
-#import "Task.h"
+#import "Task+AddOn.h"
 
-@interface NewTaskViewController : UITableViewController {
-    id <Repository> repository;
-}
+@interface NewTaskViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *taskTitle;
 
