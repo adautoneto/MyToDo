@@ -7,34 +7,69 @@
 //
 
 #import "Task+AddOn.h"
-#import "TaskRepository.h"
+#import "Repository.h"
+#import "NSManagedObjectContext+Fetches.h"
 
 @implementation Task (AddOn)
+
+#define ENTITY_NAME @"Task"
 
 - (void)setDone:(NSNumber *)done
 {
     self.done = done;
 }
 
-+(BOOL)addTask:(NSString *)title
++(Task *)addTask:(NSString *)title
 {
-	[[TaskRepository sharedRepo] addTask:title];
-	return YES;
+	NSManagedObjectContext *context = Repository.sharedInstance.managedObjectContext;
+    Task *task = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_NAME inManagedObjectContext:context];
+    
+    // If appropriate, configure the new managed object.
+    task.creationDate = [NSDate date];
+    task.title = title;
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+	
+	return task;
 }
 
-+(BOOL)deleteTask:(Task *)task
++(void)deleteTask:(Task *)task
 {
-	[[TaskRepository sharedRepo] deleteTask:task];
-	return YES;
+	NSManagedObjectContext *context = Repository.sharedInstance.managedObjectContext;
+	[context deleteObject:task];
+	
+	// Save the context.
+	NSError *error = nil;
+	if (![context save:&error]) {
+		/*
+		 Replace this implementation with code to handle the error appropriately.
+		 
+		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+		 */
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		abort();
+	}
 }
 
-+(NSFetchedResultsController *) getFetchedResultsController:(NSPredicate *)predicateOrNil ascSort:(NSArray *)ascSort descSort:(NSArray *)descSort batchSize:(int)batchSize  
++(NSFetchedResultsController *) getFetchedResultsControllerSortedByDate
 {
-    return [[TaskRepository sharedRepo] fetchedResultsController:@"Task" 
-                                                    predicateOrNil:predicateOrNil 
-                                                ascSortStringOrNil:ascSort 
-                                               descSortStringOrNil:descSort 
-                                                         batchSize:batchSize];
+    NSManagedObjectContext *context = Repository.sharedInstance.managedObjectContext;
+    NSArray *descSort = [NSArray arrayWithObject:@"creationDate"];
+    return [context fetchedResultsController:ENTITY_NAME
+                                 predicateOrNil:nil 
+                                 ascSortStringOrNil:nil 
+                                 descSortStringOrNil:descSort 
+                                 batchSize:20];
 }
 
 @end

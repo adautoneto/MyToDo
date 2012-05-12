@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Repository.h"
 
-@interface UserDefaultsRepository : NSObject < Repository >
+@interface UserDefaultsRepository : NSObject
 
 - (NSMutableArray *)getAll;
 - (void)save:(id)item;

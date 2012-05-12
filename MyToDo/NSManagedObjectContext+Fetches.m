@@ -1,32 +1,15 @@
 //
-//  RepositoryBase.m
-//  Events
+//  NSManagedObjectContext+Fetches.m
+//  MyToDo
 //
-//  Created by James Hall on 8/19/10.
-//  Copyright 2010 James Hall. All rights reserved.
+//  Created by Adauto Francisco Leite Neto on 5/12/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "RepositoryBase.h"
+#import "NSManagedObjectContext+Fetches.h"
 
-@implementation RepositoryBase
+@implementation NSManagedObjectContext (Fetches)
 
-@synthesize managedObjectContext,managedObjectModel,persistentStoreCoordinator;
-
--(void) close
-{
-	NSError *error = nil;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-			/*
-			 Replace this implementation with code to handle the error appropriately.
-			 
-			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-			 */
-			abort();
-        } 
-    }
-	
-}
 - (NSMutableArray *) getResultsFromEntity:(NSString *)entityName
 {
 	return [self getResultsFromEntity:entityName predicateOrNil:nil];
@@ -38,9 +21,8 @@
 
 - (NSMutableArray *) getResultsFromEntity:(NSString *)entityName predicateOrNil:(NSPredicate *)predicateOrNil ascSortStringOrNil:(NSArray *)ascSortStringOrNil descSortStringOrNil:(NSArray *)descSortStringOrNil
 {
-	NSFetchRequest *request = [[NSFetchRequest alloc] init]; 
-	NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
-											  inManagedObjectContext:[self managedObjectContext]]; 
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self]; 
 	[request setEntity:entity]; 
 	
 	if(predicateOrNil != nil)
@@ -71,8 +53,8 @@
 	
 	NSError *error; 
 	
-	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] 
-											executeFetchRequest:request error:&error] mutableCopy]; 
+    NSMutableArray *mutableFetchResults = [[self executeFetchRequest:request error:&error] mutableCopy];
+    
 	if (mutableFetchResults == nil) { 
 		// Handle the error. 
 	} 
@@ -88,7 +70,7 @@
     // Create the fetch request for the entity.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self];
     [fetchRequest setEntity:entity];
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:batchSize];
@@ -116,7 +98,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self sectionNameKeyPath:nil cacheName:@"Root"];
     
     NSError *error = nil;
     if (![aFetchedResultsController performFetch:&error]) {
@@ -130,5 +112,6 @@
     }
     
     return aFetchedResultsController;
-}    
+}
+
 @end

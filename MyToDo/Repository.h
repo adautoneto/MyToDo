@@ -1,16 +1,19 @@
-//
-//  Repository.h
-//  MyToDo
-//
-//  Created by Adauto Francisco Leite Neto on 4/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
+// DataManager.h
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@protocol Repository <NSObject>
+extern NSString * const DataManagerDidSaveNotification;
+extern NSString * const DataManagerDidSaveFailedNotification;
 
-- (id)getAll;
-- (void)save:(id)item;
+@interface Repository : NSObject {
+}
+
+@property (nonatomic, readonly, retain) NSManagedObjectModel *objectModel;
+@property (nonatomic, readonly, retain) NSManagedObjectContext *mainObjectContext;
+@property (nonatomic, readonly, retain) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
++ (Repository *)sharedInstance;
+- (BOOL)save;
+- (NSManagedObjectContext *)managedObjectContext;
 
 @end

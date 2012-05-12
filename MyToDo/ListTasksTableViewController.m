@@ -14,9 +14,7 @@
 
 - (NSFetchedResultsController *)fetchedResultsController {
     if (!_fetchedResultsController) {
-        NSArray *descSort = [NSArray arrayWithObject:@"creationDate"];
-        
-        _fetchedResultsController = [Task getFetchedResultsController:nil ascSort:nil descSort:descSort batchSize:20];
+        _fetchedResultsController = [Task getFetchedResultsControllerSortedByDate];
 		
 		[_fetchedResultsController setDelegate:self];
     }

@@ -11,8 +11,8 @@
 @interface Task (AddOn)
 
 - (void)setDone:(NSNumber *)done;
-+(BOOL)addTask:(NSString *)title;
-+(BOOL)deleteTask:(Task *)task;
-+(NSFetchedResultsController *) getFetchedResultsController:(NSPredicate *)predicateOrNil ascSort:(NSArray *)ascSort descSort:(NSArray *)descSort batchSize:(int)batchSize;
++(Task *)addTask:(NSString *)title;
++(void)deleteTask:(Task *)task;
++(NSFetchedResultsController *) getFetchedResultsControllerSortedByDate;
 
 @end
