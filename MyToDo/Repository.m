@@ -32,8 +32,7 @@ NSString * const kDataManagerSQLiteName = @"MyToDo.sqlite";
 	if (_objectModel != nil) {
         return _objectModel;
     }
-    _objectModel = [[NSManagedObjectModel alloc] init];
-    //_objectModel = [NSManagedObjectModel mergedModelFromBundles:nil];    
+    _objectModel = [NSManagedObjectModel mergedModelFromBundles:nil];    
     return _objectModel;
 }
 

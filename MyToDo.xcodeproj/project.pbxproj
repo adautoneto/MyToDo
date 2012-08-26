@@ -37,6 +37,7 @@
 		AAFC0E2E15EADA8F00515BB5 /* Folder+AddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E2D15EADA8F00515BB5 /* Folder+AddOn.m */; };
 		AAFC0E3515EADCED00515BB5 /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E3415EADCED00515BB5 /* Folder.m */; };
 		AAFC0E3915EADCED00515BB5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E3815EADCED00515BB5 /* Task.m */; };
+		AAFC0E3C15EAE9B200515BB5 /* ModelCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E3B15EAE9B200515BB5 /* ModelCreator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		AAFC0E3415EADCED00515BB5 /* Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Folder.m; sourceTree = "<group>"; };
 		AAFC0E3715EADCED00515BB5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		AAFC0E3815EADCED00515BB5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		AAFC0E3A15EAE9B200515BB5 /* ModelCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCreator.h; sourceTree = "<group>"; };
+		AAFC0E3B15EAE9B200515BB5 /* ModelCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCreator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				AAC60A81154DD105001A7016 /* MyToDoModel.xcdatamodeld */,
 				AAFC0E2915EADA5900515BB5 /* Tag.h */,
 				AAFC0E2A15EADA5900515BB5 /* Tag.m */,
+				AAFC0E3A15EAE9B200515BB5 /* ModelCreator.h */,
+				AAFC0E3B15EAE9B200515BB5 /* ModelCreator.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				AAFC0E2E15EADA8F00515BB5 /* Folder+AddOn.m in Sources */,
 				AAFC0E3515EADCED00515BB5 /* Folder.m in Sources */,
 				AAFC0E3915EADCED00515BB5 /* Task.m in Sources */,
+				AAFC0E3C15EAE9B200515BB5 /* ModelCreator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +377,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CFLAGS = (
+					"-all_load",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

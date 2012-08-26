@@ -9,6 +9,7 @@
 #import "Folder+AddOn.h"
 #import "Repository.h"
 #import "NSManagedObjectContext+Fetches.h"
+#import "ModelCreator.h"
 
 @implementation Folder (AddOn)
 
@@ -16,6 +17,8 @@
 
 + (Folder *)inbox
 {
+    [ModelCreator createInboxIfNotExists];
+    
     NSManagedObjectContext *context = Repository.sharedInstance.managedObjectContext;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self == %@", 1];
     NSArray *folders = [context getResultsFromEntity:ENTITY_NAME predicateOrNil:predicate];
