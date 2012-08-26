@@ -1,5 +1,5 @@
 //
-//  Folder.m
+//  Folder+AddOn.h
 //  MyToDo
 //
 //  Created by Adauto Francisco Leite Neto on 8/26/12.
@@ -7,12 +7,9 @@
 //
 
 #import "Folder.h"
-#import "Task.h"
 
+@interface Folder (AddOn)
 
-@implementation Folder
-
-@dynamic name;
-@dynamic tasks;
++ (Folder *)inbox;
 
 @end

@@ -14,6 +14,5 @@
 
 @dynamic name;
 @dynamic tasks;
-@dynamic folders;
 
 @end

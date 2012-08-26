@@ -7,6 +7,7 @@
 //
 
 #import "NewTaskViewController.h"
+#import "Folder+AddOn.h"
 
 @implementation NewTaskViewController
 @synthesize taskTitle;
@@ -18,7 +19,8 @@
 - (IBAction)save:(id)sender {
     NSLog(@"Task Title: %@", taskTitle.text);
 
-    [Task addTask:taskTitle.text];
+    Folder *inbox = [Folder inbox];
+    [Task addTask:taskTitle.text inFolder:inbox];
     
     [self cancel:sender];
 }

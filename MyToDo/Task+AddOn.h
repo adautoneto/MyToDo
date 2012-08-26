@@ -11,7 +11,7 @@
 @interface Task (AddOn)
 
 - (void)setDone:(NSNumber *)done;
-+(Task *)addTask:(NSString *)title;
++(Task *)addTask:(NSString *)title inFolder:(Folder *)folder;
 +(void)deleteTask:(Task *)task;
 +(NSFetchedResultsController *) getFetchedResultsControllerSortedByDate;
 

@@ -19,12 +19,13 @@
     self.done = done;
 }
 
-+(Task *)addTask:(NSString *)title
++(Task *)addTask:(NSString *)title inFolder:(Folder *)folder
 {
 	NSManagedObjectContext *context = Repository.sharedInstance.managedObjectContext;
     Task *task = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_NAME inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
+    task.folder = folder;
     task.creationDate = [NSDate date];
     task.title = title;
     

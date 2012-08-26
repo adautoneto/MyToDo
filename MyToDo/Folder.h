@@ -9,19 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Tag;
+@class Task;
 
 @interface Folder : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSSet *tags;
-@end
-
-@interface Folder (CoreDataGeneratedAccessors)
-
-- (void)addTagsObject:(Tag *)value;
-- (void)removeTagsObject:(Tag *)value;
-- (void)addTags:(NSSet *)values;
-- (void)removeTags:(NSSet *)values;
+@property (nonatomic, retain) Task *tasks;
 
 @end
