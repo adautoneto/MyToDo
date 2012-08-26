@@ -14,6 +14,14 @@
 @interface Folder : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) Task *tasks;
+@property (nonatomic, retain) NSSet *tasks;
+@end
+
+@interface Folder (CoreDataGeneratedAccessors)
+
+- (void)addTasksObject:(Task *)value;
+- (void)removeTasksObject:(Task *)value;
+- (void)addTasks:(NSSet *)values;
+- (void)removeTasks:(NSSet *)values;
 
 @end

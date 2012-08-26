@@ -16,8 +16,8 @@
 @property (nonatomic, retain) NSDate * creationDate;
 @property (nonatomic, retain) NSNumber * done;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) Folder *folder;
 @property (nonatomic, retain) NSSet *tags;
-@property (nonatomic, retain) Folder *folders;
 @end
 
 @interface Task (CoreDataGeneratedAccessors)

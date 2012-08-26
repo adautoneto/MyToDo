@@ -33,10 +33,10 @@
 		AAC8A08F150AE35B00416925 /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8A08E150AE35B00416925 /* IndexTableViewController.m */; };
 		AAC8A09C150AE89800416925 /* fav2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A09B150AE89800416925 /* fav2 copy.png */; };
 		AAC8A09E150AE8EE00416925 /* fusion_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A09D150AE8EE00416925 /* fusion_icon.png */; };
-		AAFC0E2415EADA5800515BB5 /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E2315EADA5800515BB5 /* Folder.m */; };
-		AAFC0E2815EADA5800515BB5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E2715EADA5800515BB5 /* Task.m */; };
 		AAFC0E2B15EADA5900515BB5 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E2A15EADA5900515BB5 /* Tag.m */; };
 		AAFC0E2E15EADA8F00515BB5 /* Folder+AddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E2D15EADA8F00515BB5 /* Folder+AddOn.m */; };
+		AAFC0E3515EADCED00515BB5 /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E3415EADCED00515BB5 /* Folder.m */; };
+		AAFC0E3915EADCED00515BB5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E3815EADCED00515BB5 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,14 +79,14 @@
 		AAC8A08E150AE35B00416925 /* IndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewController.m; sourceTree = "<group>"; };
 		AAC8A09B150AE89800416925 /* fav2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fav2 copy.png"; path = "../../images/fav2 copy.png"; sourceTree = "<group>"; };
 		AAC8A09D150AE8EE00416925 /* fusion_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fusion_icon.png; path = ../../images/fusion_icon.png; sourceTree = "<group>"; };
-		AAFC0E2215EADA5800515BB5 /* Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Folder.h; sourceTree = "<group>"; };
-		AAFC0E2315EADA5800515BB5 /* Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Folder.m; sourceTree = "<group>"; };
-		AAFC0E2615EADA5800515BB5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		AAFC0E2715EADA5800515BB5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		AAFC0E2915EADA5900515BB5 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		AAFC0E2A15EADA5900515BB5 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		AAFC0E2C15EADA8F00515BB5 /* Folder+AddOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Folder+AddOn.h"; sourceTree = "<group>"; };
 		AAFC0E2D15EADA8F00515BB5 /* Folder+AddOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Folder+AddOn.m"; sourceTree = "<group>"; };
+		AAFC0E3315EADCED00515BB5 /* Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Folder.h; sourceTree = "<group>"; };
+		AAFC0E3415EADCED00515BB5 /* Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Folder.m; sourceTree = "<group>"; };
+		AAFC0E3715EADCED00515BB5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		AAFC0E3815EADCED00515BB5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,13 +193,13 @@
 				AAFC0E2D15EADA8F00515BB5 /* Folder+AddOn.m */,
 				AAC60AA0154DE571001A7016 /* Task+AddOn.h */,
 				AAC60AA1154DE571001A7016 /* Task+AddOn.m */,
+				AAFC0E3315EADCED00515BB5 /* Folder.h */,
+				AAFC0E3715EADCED00515BB5 /* Task.h */,
+				AAFC0E3815EADCED00515BB5 /* Task.m */,
+				AAFC0E3415EADCED00515BB5 /* Folder.m */,
 				AAC60A81154DD105001A7016 /* MyToDoModel.xcdatamodeld */,
-				AAFC0E2215EADA5800515BB5 /* Folder.h */,
-				AAFC0E2615EADA5800515BB5 /* Task.h */,
 				AAFC0E2915EADA5900515BB5 /* Tag.h */,
 				AAFC0E2A15EADA5900515BB5 /* Tag.m */,
-				AAFC0E2715EADA5800515BB5 /* Task.m */,
-				AAFC0E2315EADA5800515BB5 /* Folder.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -303,10 +303,10 @@
 				AA277009155B40D300F92BCE /* Repository.m in Sources */,
 				AA277018155EEE3B00F92BCE /* NSManagedObjectContext+Fetches.m in Sources */,
 				AA277021155EFD8600F92BCE /* NewTaskViewController.m in Sources */,
-				AAFC0E2415EADA5800515BB5 /* Folder.m in Sources */,
-				AAFC0E2815EADA5800515BB5 /* Task.m in Sources */,
 				AAFC0E2B15EADA5900515BB5 /* Tag.m in Sources */,
 				AAFC0E2E15EADA8F00515BB5 /* Folder+AddOn.m in Sources */,
+				AAFC0E3515EADCED00515BB5 /* Folder.m in Sources */,
+				AAFC0E3915EADCED00515BB5 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

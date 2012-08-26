@@ -16,7 +16,7 @@
 @dynamic creationDate;
 @dynamic done;
 @dynamic title;
+@dynamic folder;
 @dynamic tags;
-@dynamic folders;
 
 @end
