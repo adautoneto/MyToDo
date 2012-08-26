@@ -13,8 +13,8 @@
 		AA27E5EC1523F6CB0041B9F4 /* ListTasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27E5EB1523F6CB0041B9F4 /* ListTasksTableViewController.m */; };
 		AA27E5F91523FA0D0041B9F4 /* UserDefaultsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27E5F81523FA0D0041B9F4 /* UserDefaultsRepository.m */; };
 		AA42A5A1154E1BCC0027B398 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA42A5A0154E1BCC0027B398 /* CoreData.framework */; };
-		AA42A5A4154E1CDD0027B398 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AA42A5A3154E1CDD0027B398 /* Task.m */; };
 		AA42A5A7154E227B0027B398 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA42A5A6154E227B0027B398 /* CoreDataTableViewController.m */; };
+		AA7CB0271560733100E237AD /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7CB0261560733100E237AD /* Task.m */; };
 		AAA42E99153A091D00B47BCB /* inbox_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42E98153A091D00B47BCB /* inbox_24x24.png */; };
 		AAA42E9B153A09C900B47BCB /* calendar_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42E9A153A09C900B47BCB /* calendar_24x24.png */; };
 		AAA42E9D153A0A9A00B47BCB /* next_24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA42E9C153A0A9A00B47BCB /* next_24x24.png */; };
@@ -34,6 +34,8 @@
 		AAC8A08F150AE35B00416925 /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8A08E150AE35B00416925 /* IndexTableViewController.m */; };
 		AAC8A09C150AE89800416925 /* fav2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A09B150AE89800416925 /* fav2 copy.png */; };
 		AAC8A09E150AE8EE00416925 /* fusion_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8A09D150AE8EE00416925 /* fusion_icon.png */; };
+		AAFC0E0415EABC0700515BB5 /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E0315EABC0700515BB5 /* Folder.m */; };
+		AAFC0E0A15EABC6900515BB5 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC0E0915EABC6900515BB5 /* Tag.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +50,10 @@
 		AA27E5F71523FA0D0041B9F4 /* UserDefaultsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsRepository.h; sourceTree = "<group>"; };
 		AA27E5F81523FA0D0041B9F4 /* UserDefaultsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsRepository.m; sourceTree = "<group>"; };
 		AA42A5A0154E1BCC0027B398 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		AA42A5A2154E1CDD0027B398 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		AA42A5A3154E1CDD0027B398 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		AA42A5A5154E227B0027B398 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		AA42A5A6154E227B0027B398 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		AA7CB0251560733100E237AD /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		AA7CB0261560733100E237AD /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		AAA42E98153A091D00B47BCB /* inbox_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inbox_24x24.png; path = ../../images/inbox_24x24.png; sourceTree = "<group>"; };
 		AAA42E9A153A09C900B47BCB /* calendar_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_24x24.png; path = ../../images/calendar_24x24.png; sourceTree = "<group>"; };
 		AAA42E9C153A0A9A00B47BCB /* next_24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next_24x24.png; path = ../../images/next_24x24.png; sourceTree = "<group>"; };
@@ -78,6 +80,10 @@
 		AAC8A08E150AE35B00416925 /* IndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewController.m; sourceTree = "<group>"; };
 		AAC8A09B150AE89800416925 /* fav2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fav2 copy.png"; path = "../../images/fav2 copy.png"; sourceTree = "<group>"; };
 		AAC8A09D150AE8EE00416925 /* fusion_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fusion_icon.png; path = ../../images/fusion_icon.png; sourceTree = "<group>"; };
+		AAFC0E0215EABC0700515BB5 /* Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Folder.h; sourceTree = "<group>"; };
+		AAFC0E0315EABC0700515BB5 /* Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Folder.m; sourceTree = "<group>"; };
+		AAFC0E0815EABC6900515BB5 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		AAFC0E0915EABC6900515BB5 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +188,13 @@
 			children = (
 				AAC60AA0154DE571001A7016 /* Task+AddOn.h */,
 				AAC60AA1154DE571001A7016 /* Task+AddOn.m */,
+				AAFC0E0215EABC0700515BB5 /* Folder.h */,
+				AAFC0E0315EABC0700515BB5 /* Folder.m */,
+				AAFC0E0815EABC6900515BB5 /* Tag.h */,
+				AAFC0E0915EABC6900515BB5 /* Tag.m */,
 				AAC60A81154DD105001A7016 /* MyToDoModel.xcdatamodeld */,
-				AA42A5A2154E1CDD0027B398 /* Task.h */,
-				AA42A5A3154E1CDD0027B398 /* Task.m */,
+				AA7CB0251560733100E237AD /* Task.h */,
+				AA7CB0261560733100E237AD /* Task.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,11 +294,13 @@
 				AAA42EA9153A24F800B47BCB /* TaskViewCell.m in Sources */,
 				AAC60A83154DD105001A7016 /* MyToDoModel.xcdatamodeld in Sources */,
 				AAC60AA2154DE571001A7016 /* Task+AddOn.m in Sources */,
-				AA42A5A4154E1CDD0027B398 /* Task.m in Sources */,
 				AA42A5A7154E227B0027B398 /* CoreDataTableViewController.m in Sources */,
 				AA277009155B40D300F92BCE /* Repository.m in Sources */,
 				AA277018155EEE3B00F92BCE /* NSManagedObjectContext+Fetches.m in Sources */,
 				AA277021155EFD8600F92BCE /* NewTaskViewController.m in Sources */,
+				AA7CB0271560733100E237AD /* Task.m in Sources */,
+				AAFC0E0415EABC0700515BB5 /* Folder.m in Sources */,
+				AAFC0E0A15EABC6900515BB5 /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

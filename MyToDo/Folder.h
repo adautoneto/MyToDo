@@ -1,8 +1,8 @@
 //
-//  Task.h
+//  Folder.h
 //  MyToDo
 //
-//  Created by Adauto Francisco Leite Neto on 5/13/12.
+//  Created by Adauto Francisco Leite Neto on 8/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,15 +11,13 @@
 
 @class Tag;
 
-@interface Task : NSManagedObject
+@interface Folder : NSManagedObject
 
-@property (nonatomic, retain) NSDate * creationDate;
-@property (nonatomic, retain) NSNumber * done;
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *tags;
 @end
 
-@interface Task (CoreDataGeneratedAccessors)
+@interface Folder (CoreDataGeneratedAccessors)
 
 - (void)addTagsObject:(Tag *)value;
 - (void)removeTagsObject:(Tag *)value;
